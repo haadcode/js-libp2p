@@ -335,6 +335,10 @@ class Libp2p extends EventEmitter {
 
     // If a protocol was provided, create a new stream
     if (protocols) {
+      // Prune old streams for the protocol
+      const oldStreams = Array.from(connection.registry.entries()).filter(e => e[1] === protocols)
+      oldStreams.forEach((e) => connection.removeStream(connection.registry.get(e[0])))
+      // Create a new stream
       return connection.newStream(protocols)
     }
 
