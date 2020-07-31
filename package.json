@@ -97,7 +97,6 @@
     "it-concat": "^1.0.0",
     "it-pair": "^1.0.0",
     "it-pushable": "^1.4.0",
-    "it-ws": "https://github.com/haadcode/it-ws.git",
     "level": "^6.0.1",
     "libp2p-bootstrap": "^0.11.0",
     "libp2p-delegated-content-routing": "^0.5.0",
